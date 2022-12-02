@@ -25,8 +25,8 @@ export default function MainPage() {
   }
   return (
     <div className={styles.mainPage}>
-      메인페이지
-      <div>
+      <p className={styles.p}>메인페이지</p>
+      <div className={styles.sports}>
         옵션, 검색
         <select name='sports' value={selectOption} onChange={handleSelect}>
           <option value='ALL'>전체</option>
@@ -37,7 +37,7 @@ export default function MainPage() {
         </select>
         <form onSubmit={handleSubmit}>
           <input type='text' value={searchText} onChange={handleTextChange} placeholder='검색어를 입력하세요.' />
-          <button type='submit'>검색</button>
+          <button type='submit' className={styles.search}>검색</button>
         </form>
       </div>
       <Table striped bordered hover>
