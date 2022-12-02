@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import './write.module.scss'
 import Table from 'react-bootstrap/Table'
@@ -10,7 +11,7 @@ function Writepage() {
   return <div className='writepage'>
     {
       num === 1 ? <Showwrite /> : <Write />
-    }
+    }휴
   </div>
 }
 
@@ -38,7 +39,7 @@ function Showwrite() {
 function Content() {
   const [content, setcontent] = useState(['장소', '종목', '날짜', '친밀도'])
   return (
-    <div className='list'>
+    <div className='list' onChange={() => {setNum(1)}}>
       <div className='place'>
         <AiFillEnvironment />
         <p>{content[0]}</p>
@@ -65,7 +66,7 @@ function Content() {
 
 function Write() {
   return (
-    <div className='write'>
+    <div className='write' onChange={() => {setNum(0)}}>
       <label>제목</label>
       <input type="text" />
       <select>
