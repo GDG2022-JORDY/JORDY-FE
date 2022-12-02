@@ -14,7 +14,6 @@ export default function MainPage() {
   }
   const handleSubmit = (event) => {
     event.preventDefault()
-    console.log(searchText)
   }
 
   const handleSelect = (e) => {
