@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import "./write.module.scss"
+import styles from "./write.module.scss"
 import Table from 'react-bootstrap/Table'
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -9,7 +9,7 @@ import { AiFillEnvironment, AiFillFire, AiFillCloud, AiFillFile } from 'react-ic
 function Writepage() {
   const [num, setNum] = useState(0)
   return (
-    <div className='writepage'>
+    <div className={styles.writepage}>
       {/* {
         num === 1 ? <Showwrite /> : <Write />
       } */}
@@ -21,16 +21,16 @@ function Writepage() {
 
 function Showwrite() {
   return (
-    <div className='showwrite'>
-      <h4>~~</h4>
+    <div className={styles.showwrite}>
+      <h4 className={styles.title}>~~</h4>
       <Table striped bordered hover>
         <tbody>
           <tr>
-            <td>글쓴이</td>
+            <td className={styles.td}>글쓴이</td>
             <td>~~</td>
           </tr>
           <tr>
-            <td>글 작성일</td>
+            <td className={styles.td}>글 작성일</td>
             <td>~~</td>
           </tr>
         </tbody>
@@ -44,28 +44,28 @@ function Content()  {
   const [content, setcontent] = useState(['장소', '종목', '날짜', '친밀도'])
   return (
     <div
-      className='list'
+      className={styles.list}
       onChange={() => {
         setNum(1)
       }}
     >
-      <div className='place'>
-        <AiFillEnvironment />
+      <div className={styles.place}>
+        <AiFillEnvironment className={styles.img} />
         <p>{content[0]}</p>
         <p>~~</p>
       </div>
-      <div className='evnet'>
-        <AiFillCloud />
+      <div className={styles.event}>
+        <AiFillCloud className={styles.img} />
         <p>{content[1]}</p>
         <p>~~</p>
       </div>
-      <div className='date'>
-        <AiFillFile />
+      <div className={styles.date}>
+        <AiFillFile className={styles.img} />
         <p>{content[2]}</p>
         <p>~~</p>
       </div>
-      <div className='love'>
-        <AiFillFire />
+      <div className={styles.love}>
+        <AiFillFire className={styles.img} />
         <p>{content[3]}</p>
         <p>~~~</p>
       </div>
@@ -76,13 +76,13 @@ function Content()  {
 function Write() {
   return (
     <div
-      className='write'
+      className={styles.write}
       onChange={() => {
         setNum(0)
       }}
     >
       <label>제목</label>
-      <input type='text' />
+      <input type='text' className={styles.input} />
       <select>
         <option>전체</option>
         <option>축구</option>
@@ -90,9 +90,9 @@ function Write() {
         <option>야구</option>
       </select>
       <label>만날장소</label>
-      <input type='text' />
+      <input type='text' className={styles.input} />
       <label>만날날짜</label>
-      <input type='date' />
+      <input type='date' className={styles.input} />
     </div>
   )
 }
