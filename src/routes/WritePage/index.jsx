@@ -2,17 +2,13 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import './write.module.scss'
 import Table from 'react-bootstrap/Table'
-import {useState} from 'react'
+import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { AiFillEnvironment, AiFillFire, AiFillCloud , AiFillFile} from 'react-icons/ai'
+import { AiFillEnvironment, AiFillFire, AiFillCloud, AiFillFile } from 'react-icons/ai'
 
 function Writepage() {
   const [num, setNum] = useState(0)
-  return <div className='writepage'>
-    {
-      num === 1 ? <Showwrite /> : <Write />
-    }휴
-  </div>
+  return <div className='writepage'>{num === 1 ? <Showwrite /> : <Write />}휴</div>
 }
 
 function Showwrite() {
@@ -39,7 +35,12 @@ function Showwrite() {
 function Content() {
   const [content, setcontent] = useState(['장소', '종목', '날짜', '친밀도'])
   return (
-    <div className='list' onChange={() => {setNum(1)}}>
+    <div
+      className='list'
+      onChange={() => {
+        setNum(1)
+      }}
+    >
       <div className='place'>
         <AiFillEnvironment />
         <p>{content[0]}</p>
@@ -66,9 +67,14 @@ function Content() {
 
 function Write() {
   return (
-    <div className='write' onChange={() => {setNum(0)}}>
+    <div
+      className='write'
+      onChange={() => {
+        setNum(0)
+      }}
+    >
       <label>제목</label>
-      <input type="text" />
+      <input type='text' />
       <select>
         <option>전체</option>
         <option>축구</option>
@@ -76,9 +82,9 @@ function Write() {
         <option>야구</option>
       </select>
       <label>만날장소</label>
-      <input type="text" />
+      <input type='text' />
       <label>만날날짜</label>
-      <input type="date" />
+      <input type='date' />
     </div>
   )
 }
