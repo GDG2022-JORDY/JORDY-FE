@@ -1,7 +1,8 @@
 import styles from './mainPage.module.scss'
 import Table from 'react-bootstrap/Table'
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { dummyList } from '../../dummyData'
 
 export default function MainPage() {
   const navigate = useNavigate()
@@ -37,7 +38,9 @@ export default function MainPage() {
         </select>
         <form onSubmit={handleSubmit}>
           <input type='text' value={searchText} onChange={handleTextChange} placeholder='검색어를 입력하세요.' />
-          <button type='submit' className={styles.search}>검색</button>
+          <button type='submit' className={styles.search}>
+            검색
+          </button>
         </form>
       </div>
       <Table striped bordered hover>
@@ -50,18 +53,14 @@ export default function MainPage() {
           </tr>
         </thead>
         <tbody>
-          <tr onClick={handleClickTr}>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr onClick={handleClickTr}>
-            <td>2</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
+          {dummyList.map((el) => (
+            <tr onClick={handleClickTr}>
+              <td>{el.id}</td>
+              <td>{el.event}</td>
+              <td>{el.title}</td>
+              <td>{el.date}</td>
+            </tr>
+          ))}
         </tbody>
       </Table>
     </div>
