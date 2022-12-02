@@ -2,11 +2,7 @@ import styles from './write.module.scss'
 import Table from 'react-bootstrap/Table'
 
 function Writepage() {
-  return <div className='writepage'>
-    {
-
-    }
-  </div>
+  return <div className='writepage'>test</div>
 }
 
 function showwrite() {
