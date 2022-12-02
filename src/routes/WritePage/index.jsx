@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import './write.module.scss'
+import "./write.module.scss"
 import Table from 'react-bootstrap/Table'
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -8,12 +8,20 @@ import { AiFillEnvironment, AiFillFire, AiFillCloud, AiFillFile } from 'react-ic
 
 function Writepage() {
   const [num, setNum] = useState(0)
-  return <div className='writepage'>{num === 1 ? <Showwrite /> : <Write />}휴</div>
+  return (
+    <div className='writepage'>
+      {/* {
+        num === 1 ? <Showwrite /> : <Write />
+      } */}
+      <Showwrite />
+      <Write />
+    </div>
+  )
 }
 
 function Showwrite() {
   return (
-    <div className='showwirte'>
+    <div className='showwrite'>
       <h4>~~</h4>
       <Table striped bordered hover>
         <tbody>
@@ -32,7 +40,7 @@ function Showwrite() {
   )
 }
 
-function Content() {
+function Content()  {
   const [content, setcontent] = useState(['장소', '종목', '날짜', '친밀도'])
   return (
     <div
