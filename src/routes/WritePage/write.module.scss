@@ -1,36 +1,52 @@
 .showwrite .title {
-    text-align: center;
+  text-align: center;
 }
 
 .showwrite .td {
-    width: 150px;
+  width: 150px;
 }
 
 .list .img {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .list .place {
-    display: flex;
+  display: flex;
+
+  p {
+    margin-right: 100px;
+  }
 }
 
 .list .event {
-    display: flex;
+  display: flex;
+
+  p {
+    margin-right: 100px;
+  }
 }
 
 .list .date {
-    display: flex;
+  display: flex;
+
+  p {
+    margin-right: 100px;
+  }
 }
 
 .list .love {
-    display: flex;
+  display: flex;
+
+  p {
+    margin-right: 100px;
+  }
 }
 
 .write {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .write .input {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }

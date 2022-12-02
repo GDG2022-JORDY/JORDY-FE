@@ -54,7 +54,7 @@ export default function MainPage() {
         </thead>
         <tbody>
           {dummyList.map((el) => (
-            <tr onClick={handleClickTr}>
+            <tr onClick={handleClickTr} key={el.id}>
               <td>{el.id}</td>
               <td>{el.event}</td>
               <td>{el.title}</td>
