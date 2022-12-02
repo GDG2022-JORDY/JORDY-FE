@@ -1,0 +1,57 @@
+export const dummyList = [
+  { id: 1, event: 'soccer', title: '대구FC 경기 같이 보러 가실 분?', date: '2022-12-03' },
+  { id: 2, event: 'baseball', title: 'gg', date: '2022-12-04' },
+]
+
+export const dummyContents = [
+  {
+    id: 1,
+    writer: '닉네임',
+    event: 'soccer',
+    title: '대구FC 경기 같이 보러 가실 분?',
+    date: '2022-12-03',
+    place: '동성로',
+    meetDate: '2022-12-10',
+    friendly: '50%',
+  },
+  {
+    id: 2,
+    writer: '닉네임',
+    event: 'baseball',
+    title: '삼성라이온즈 경기 보러 가실 분 구해요',
+    date: '2022-12-04',
+    place: '경북대학교',
+    meetDate: '2022-12-14',
+    friendly: '80%',
+  },
+  {
+    id: 3,
+    writer: '닉네임',
+    event: 'baseball',
+    title: '두산vsLG 경기 같이 보실 분~',
+    date: '2022-12-04',
+    place: '잠실역',
+    meetDate: '2022-12-16',
+    friendly: '70%',
+  },
+  {
+    id: 4,
+    writer: '닉네임',
+    event: 'basketball',
+    title: '대구:안양 플레이오프 2차전 동행 구해요',
+    date: '2022-12-04',
+    place: '범어역',
+    meetDate: '2022-12-22',
+    friendly: '90%',
+  },
+  {
+    id: 5,
+    writer: '닉네임',
+    event: 'soccer',
+    title: ' 2차전 동행 구해요',
+    date: '2022-12-05',
+    place: 'ㅇ',
+    meetDate: '2022-12-27',
+    friendly: '60%',
+  },
+]

@@ -9,8 +9,7 @@ const router = createBrowserRouter([
     element: <MainPage />,
   },
   {
-    path : '/write',
-    // path: '/write/:postId',
+    path: '/write/:postId',
     element: <Writepage />,
   },
 ])
