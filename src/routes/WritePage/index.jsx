@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import styles from './write.module.scss'
 
 function Writepage() {
@@ -13,3 +14,5 @@ function showwrite() {
 }
 
 export default Writepage
+=======
+>>>>>>> Stashed changes
